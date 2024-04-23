@@ -21,6 +21,12 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     optionalDependencies:
+      '@rollup/rollup-darwin-arm64':
+        specifier: '*'
+        version: 4.16.3
+      '@rollup/rollup-darwin-x64':
+        specifier: '*'
+        version: 4.16.3
       '@rollup/rollup-linux-x64-gnu':
         specifier: '*'
         version: 4.16.3
@@ -425,6 +431,16 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@rollup/rollup-darwin-arm64@4.16.3':
+    resolution: {integrity: sha512-Lj8J9WzQRvfWO4GfI+bBkIThUFV1PtI+es/YH/3cwUQ+edXu8Mre0JRJfRrAeRjPiHDPFFZaX51zfgHHEhgRAg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@rollup/rollup-darwin-x64@4.16.3':
+    resolution: {integrity: sha512-NPPOXMTIWJk50lgZmRReEYJFvLG5rgMDzaVauWNB2MgFQYm9HuNXQdVVg3iEZ3A5StIzxhMlPjVyS5fsv4PJmg==}
+    cpu: [x64]
+    os: [darwin]
 
   '@rollup/rollup-linux-arm-musleabihf@4.16.4':
     resolution: {integrity: sha512-tJfJaXPiFAG+Jn3cutp7mCs1ePltuAgRqdDZrzb1aeE3TktWWJ+g7xK9SNlaSUFw6IU4QgOxAY4rA+wZUT5Wfg==}
@@ -2301,6 +2317,12 @@ snapshots:
       fastq: 1.17.1
 
   '@pkgjs/parseargs@0.11.0':
+    optional: true
+
+  '@rollup/rollup-darwin-arm64@4.16.3':
+    optional: true
+
+  '@rollup/rollup-darwin-x64@4.16.3':
     optional: true
 
   '@rollup/rollup-linux-arm-musleabihf@4.16.4':
