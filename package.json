@@ -1,6 +1,5 @@
 {
   "name": "electron-countdown",
-  "private": true,
   "version": "0.0.0",
   "description": "a desktop count down can help you mananger your time",
   "type": "module",
@@ -31,6 +30,12 @@
     "vite": "^5.1.6",
     "vite-plugin-electron": "^0.28.6",
     "vite-plugin-electron-renderer": "^0.14.5"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "*",
+    "@rollup/rollup-win32-x64-msvc": "*",
+    "@rollup/rollup-darwin-x64": "*",
+    "@rollup/rollup-darwin-arm64": "*"
   },
   "main": "dist-electron/main.js",
   "keywords": [

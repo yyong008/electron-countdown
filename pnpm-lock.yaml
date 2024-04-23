@@ -20,6 +20,13 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+    optionalDependencies:
+      '@rollup/rollup-linux-x64-gnu':
+        specifier: '*'
+        version: 4.16.3
+      '@rollup/rollup-win32-x64-msvc':
+        specifier: '*'
+        version: 4.16.3
     devDependencies:
       '@types/react':
         specifier: ^18.2.64
@@ -430,6 +437,17 @@ packages:
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
+
+  '@rollup/rollup-linux-x64-gnu@4.16.3':
+    resolution: {integrity: sha512-n4HEgIJulNSmAKT3SYF/1wuzf9od14woSBseNkzur7a+KJIbh2Jb+J9KIsdGt3jJnsLW0BT1Sj6MiwL4Zzku6Q==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-win32-x64-msvc@4.16.3':
+    resolution: {integrity: sha512-hutnZavtOx/G4uVdgoZz5279By9NVbgmxOmGGgnzUjZYuwp2+NzGq6KXQmHXBWz7W/vottXn38QmKYAdQLa/vQ==}
+    cpu: [x64]
+    os: [win32]
 
   '@sindresorhus/is@4.6.0':
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
@@ -2289,6 +2307,12 @@ snapshots:
     optional: true
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.16.4':
+    optional: true
+
+  '@rollup/rollup-linux-x64-gnu@4.16.3':
+    optional: true
+
+  '@rollup/rollup-win32-x64-msvc@4.16.3':
     optional: true
 
   '@sindresorhus/is@4.6.0': {}
