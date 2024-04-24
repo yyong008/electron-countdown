@@ -1,6 +1,6 @@
 {
   "name": "countdown",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a desktop count down can help you mananger your time",
   "type": "module",
   "scripts": {

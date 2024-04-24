@@ -2,6 +2,13 @@
 
 a desktop count down can help you mananger your time。
 
+## skills
+
+- 🃏electron
+- 🎇react
+- 🌈tailwindcss
+- 🚀vite
+
 ## before
 
 ```sh
