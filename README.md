@@ -26,4 +26,10 @@ pnpm install
 pnpm run dev # in dev
 
 pnpm run build # build
+
+# set tag
+pnpm tag v0.0.2
+
+# push tag
+pnpm push:tag
 ```
