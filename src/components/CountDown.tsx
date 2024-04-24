@@ -36,10 +36,11 @@ export function CountDown(props: CountDownProps) {
     if (isTargetAchieved) {
       timer.stop();
       props.setStatus(2);
+      window.ipcRenderer.invoke('notification-countdown-completed')
     }
   }, [isTargetAchieved, props, timer]);
   return (
-    <div className="flex justify-center items-center h-[40px] text-[20px] py-[10px]">
+    <div className="flex justify-center items-center h-[60px] text-[24px] py-[20px] bg-green-300">
       {timer.getTimeValues().toString()}
     </div>
   );

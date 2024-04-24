@@ -6,7 +6,7 @@ type ResetProps = {
 
 export function Reset(props: ResetProps) {
   return (
-    <div className="flex justify-center items-center py-[10px]">
+    <div className="flex justify-center items-center py-[10px] bg-blue-200">
       <button className="flex h-[40px] text-[20px]" onClick={() => {
         props.setStatus(0)
       }}>

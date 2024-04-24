@@ -118,7 +118,6 @@ export function CountDownSetting(props: CountDownSettingProps) {
           })}
         </select>
         <span className="text-[14px] mx-[6px]">秒</span>
-        <script></script>
         <div className="flex">
           <button
             type="submit"

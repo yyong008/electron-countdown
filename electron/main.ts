@@ -1,4 +1,4 @@
-import { app, BrowserWindow, Menu, Tray } from "electron";
+import { app, BrowserWindow, ipcMain, Menu, Notification, Tray } from "electron";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 // import openAboutWindow from "about-window";
@@ -97,9 +97,10 @@ function createWindow() {
   if (VITE_DEV_SERVER_URL) {
     win.loadURL(VITE_DEV_SERVER_URL);
   } else {
-    console.log(path.join(RENDERER_DIST, "index.html"))
     win.loadFile(path.join(RENDERER_DIST, "index.html"));
   }
+
+  initIPCMain()
 }
 
 app.on("window-all-closed", () => {
@@ -116,3 +117,21 @@ app.on("activate", () => {
 });
 
 app.whenReady().then(createWindow);
+
+function initIPCMain() {
+  ipcMain.handle("notification-countdown-completed", function() {
+    const notification = new Notification({
+      title: "CountDown",
+      body: "CountDown time Completed"
+    })
+    notification.show()
+  })
+
+  ipcMain.handle('system-window-close', function() {
+    app.quit()
+  })
+
+  ipcMain.handle('system-window-small', function() {
+    win?.minimize()
+  })
+}
